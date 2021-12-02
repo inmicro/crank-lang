@@ -24,6 +24,8 @@ const (
 	SLASH    = "/"
 	LT       = "<"
 	GT       = ">"
+	EQ       = "=="
+	NOT_EQ   = "!="
 
 	// delimiters
 	COMMA     = ","
@@ -34,25 +36,23 @@ const (
 	RBRACE    = "}"
 
 	//keywords
-	FUNCTION         = "FUNCTION"
-	LET              = "LET"
-	FLOATING_INTEGER = "FLOATING_INTEGER"
-	TRUE             = "TRUE"
-	FALSE            = "FALSE"
-	IF               = "IF"
-	ELSE             = "ELSE"
-	RETURN           = "RETURN"
+	FUNCTION = "FUNCTION"
+	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":               FUNCTION,
-	"let":              LET,
-	"floating_integer": FLOATING_INTEGER,
-	"true":             TRUE,
-	"false":            FALSE,
-	"if":               IF,
-	"else":             ELSE,
-	"return":           RETURN,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 func LookupIdent(ident string) TokenType {
