@@ -11,9 +11,9 @@ An experimental & interpreted programming language written in Go.
 This project is still under developement. 
 
 ## To-Do
-- [] Add unicode support
-- [] Implement hex notation + floats
-- [] add library system.
+- [ ] Add unicode support
+- [ ] Implement hex notation + floats
+- [ ] add library system.
 
 ### Thanks
 Thorsten Ball for writing his excellent book on interpreters in go.
