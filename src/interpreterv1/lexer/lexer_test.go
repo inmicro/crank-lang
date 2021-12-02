@@ -12,8 +12,7 @@ func TestToken(t *testing.T) {
 	x + y;
 	};
 	let result = add(five, ten);
-	!-/*5;
-	5 < 10 > 5;
+	floating_integer;
 	`
 
 	tests := []struct {
@@ -77,23 +76,5 @@ func TestToken(t *testing.T) {
 	}
 }
 
-func TestNextToken(t *testing.T) {
-	input := `let five = 5;
-	let ten = 10;
-	let add = fn(x, y) {
-	x + y;
-	};
-	let result = add(five, ten);
-	!-/*5;
-	5 < 10 > 5;
-	if (5 < 10) {
-	return true;
-	} else {
-	return false;
-	}`
-	if input == `0` {
-		t.Fatalf("Misc > Experimental: You attempted to use an in-dev feature. Please refrain.")
-	}
-}
 
 // signing off
