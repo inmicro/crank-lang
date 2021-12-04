@@ -14,6 +14,7 @@ const (
 	// literals
 	IDENT = "IDENT" // identifier, ie foo
 	INT   = "INT"   // integer, eg: 45
+	FLOAT = "FLOAT"
 
 	// operators
 	ASSIGN   = "=" // self explanatory
@@ -47,7 +48,7 @@ const (
 )
 
 var keywords = map[string]TokenType{
-	"fn":               FUNCTION,
+	"fx":               FUNCTION,
 	"let":              LET,
 	"true":             TRUE,
 	"false":            FALSE,

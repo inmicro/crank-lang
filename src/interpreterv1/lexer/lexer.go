@@ -128,6 +128,7 @@ func (l *Lexer) readNumber() string {
 
 func isDigit(ch byte) bool {
 	return '0' <= ch && ch <= '9'
+
 }
 
 func (l *Lexer) peekChar() byte {

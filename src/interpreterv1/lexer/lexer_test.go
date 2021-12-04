@@ -89,6 +89,7 @@ func TestToken_two(t *testing.T) {
 	}
 	10 == 10;
 	10 != 9;
+	10.5;
 	`
 	tests := []struct {
 		expectedType    token.TokenType
@@ -166,6 +167,8 @@ func TestToken_two(t *testing.T) {
 		{token.INT, "10"},
 		{token.NOT_EQ, "!="},
 		{token.INT, "9"},
+		{token.SEMICOLON, ";"},
+		{token.FLOAT, "10.5"},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
