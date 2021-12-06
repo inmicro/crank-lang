@@ -47,6 +47,7 @@ const (
 	FLOATING_INTEGER = "FLOATING_INTEGER"
 )
 
+// helps in identification of keywords and identifiers. See lookupident()
 var keywords = map[string]TokenType{
 	"fx":               FUNCTION,
 	"let":              LET,

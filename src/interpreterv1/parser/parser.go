@@ -29,6 +29,23 @@ func (p *Parser) nextToken() {
 
 func (p *Parser) ParseProgram() *ast.Program {
 	// program := newProgramASTNode()
+	program := &ast.Program{}
+	program.Statements = []ast.Statement{}
 
-	return nil
+	for p.curToken.Type != token.EOF {
+		if p.parseStatement() != nil {
+			program.Statements = append(program.Statements, p.parseStatement())
+		}
+		p.nextToken()
+	}
+	return program
+}
+
+func (p *Parser) parseStatement() ast.Statement {
+	switch p.curToken.Type {
+	case token.LET:
+		return p.parseStatement()
+	default:
+		return nil
+	}
 }
